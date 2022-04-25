@@ -30,11 +30,13 @@ public class DamageHandler : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D() {
+		
 		health--;
 
 		if(invulnPeriod > 0) {
 			invulnTimer = invulnPeriod;
 			gameObject.layer = 10;
+			//ScoreSystem.instance.AddPoint();
 		}
 	}
 
